@@ -15,7 +15,7 @@ always @(posedge pix_clk) begin
         //Count ones
         ones = din[0]+din[1]+din[2]+din[3]+din[4]+din[5]+din[6]+din[7];
 
-        //Generate q_m
+        //Generate q_m (wiki.sipeed.com)
         q_m[0] = din[0];
         for (i=1; i<8; i=i+1)
             q_m[i] = q_m[i-1] ^ din[i];
