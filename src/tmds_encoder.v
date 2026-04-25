@@ -24,7 +24,7 @@ always @(posedge pix_clk) begin
 
         dout <= {~q_m[8], q_m};
     end else begin
-        case ({c1,c0})
+        case ({c1,c0})    //From wiki.sipeed.com
             2'b00: dout <= 10'b1101010100;
             2'b01: dout <= 10'b0010101011;
             2'b10: dout <= 10'b0101010100;
