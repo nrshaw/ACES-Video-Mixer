@@ -7,7 +7,7 @@ module i2c_init (
 reg sda_out, sda_oe;
 assign sda = sda_oe ? sda_out : 1'bz;
 
-localparam DEV_ADDR = 8'h40;
+localparam DEV_ADDR = 8'h40;    //ADV7283 Address
 
 //Clock divider (100kHz ish) - max 400kHz for I2C with ADV7283
 reg [8:0] div;
