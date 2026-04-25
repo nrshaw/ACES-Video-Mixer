@@ -19,8 +19,8 @@ wire tmds_g_serial;
 wire tmds_b_serial;
 
 //TMDS encoding
-tmds_encoder enc_r (.pix_clk(pix_clk), .din(r), .c0(1'b0),  .c1(1'b0),  .de(de), .dout(tmds_r));
-tmds_encoder enc_g (.pix_clk(pix_clk), .din(g), .c0(1'b0),  .c1(1'b0),  .de(de), .dout(tmds_g));
+tmds_encoder enc_r (.pix_clk(pix_clk), .din(r), .c0(hsync), .c1(vsync), .de(de), .dout(tmds_r));
+tmds_encoder enc_g (.pix_clk(pix_clk), .din(g), .c0(hsync), .c1(vsync), .de(de), .dout(tmds_g));
 tmds_encoder enc_b (.pix_clk(pix_clk), .din(b), .c0(hsync), .c1(vsync), .de(de), .dout(tmds_b));
 
 //Serialize (5x clk to 10x for +/-)
